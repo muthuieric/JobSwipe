@@ -18,7 +18,7 @@
   background-color: #0000ff;
   padding: 20px;
   padding-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   display: flex;
   flex-direction: column;
   text-align:justify;
@@ -32,16 +32,18 @@
 
   
 }
-#title{
+.fSection p:first-child{
   line-height: 80px;
   font-size: 2rem;
   font-weight: 900;
 }
-#sTitle{
+.fSection p:nth-child(2){
   font-size: 1.5rem;
   font-weight: 800;
+  
 }
-#tTitle{
+
+.fSection p:last-child{
   font-size: 1rem;
   font-weight: 600;
 }
@@ -50,16 +52,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 10px;
-  
+  margin-bottom: 10px;  
 }
+
 
 #jobQuery,
 #location {
   padding: 0.5rem;
   width: 100%;
   max-width: 600px;
-  border: 1px solid #fff;
+  border: none; 
   border-radius: 10px;
   margin: 10px;
 }
@@ -70,6 +72,8 @@
   height: 40px; 
   background-color: #fff;
   color: blue;
+  font-size: 1rem;
+  font-weight: 800;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -77,4 +81,47 @@
 
 .sSection{
 background-color: aliceblue;
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  width: 100%;
+  min-height: 400px;
+}
+
+.card {
+  background-color: #FFF;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card p:first-child {
+  color: #00F;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.card p:nth-child(2){
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+}
+.card p:nth-child(3){
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+
+  }
+.card p:last-child{
+  color: #00F;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+}
 }
