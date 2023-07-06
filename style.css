@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+.fSection{
+background-color:#0000ff;
+height: 30%;
+}
+.title{
+  color: white;
+}
+
+
+.sSection{
+background-color: aliceblue;
+}
