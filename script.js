@@ -12,7 +12,7 @@ searchBtn.addEventListener('click', () => {
   const location = locationInput.value;
 
   // Construct API URL
-  const apiUrlWithParams = `${apiUrl}/jobs/gb/search/1?app_id=${appId}&app_key=${appKey}&what=${jobQuery}&where=${location}`;
+  const apiUrlWithParams = `${apiUrl}/jobs/us/search/1?app_id=${appId}&app_key=${appKey}&what=${jobQuery}&where=${location}`;
 
   // Fetch job search results
   fetch(apiUrlWithParams)
