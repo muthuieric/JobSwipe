@@ -101,12 +101,12 @@ background-color: aliceblue;
 }
 .card p:first-child {
   color: #00F;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 2px;
 }
 .card p:nth-child(2){
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 10px;
 
