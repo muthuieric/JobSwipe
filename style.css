@@ -123,6 +123,99 @@
  }
 }
 
+
+.enquire h1{
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form-control {
+  max-width: 1000px;
+  width: 100%;
+  margin: 1rem auto; /* Set top and bottom margin to auto and left/right margin to 1rem */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  display: flex; /* Add flex display to enable centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.form-control:hover{
+  border: blue 1px solid;
+}
+.form-control:focus {
+  border-color: blue;
+  outline: none;
+}
+textarea {
+height:120px;
+}
+.submit-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 10px auto; /* Set top and bottom margin to 10px and left/right margin to auto */
+  display: block; /* Change the display to block to center horizontally */
+}
+
+.submit-btn:hover {
+  transform: scale(1.06);
+
+}
+
+
+.contact-info {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.contact-item {
+width: 400px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.contact-item span {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: blue;
+}
+
+.contact-item p {
+font-size: 16px;
+line-height: 1.4;
+}
+
+.contact-item a {
+text-decoration: none;
+color: #333;
+transition: color 0.3s;
+}
+
+.contact-item a:hover, a:focus {
+color: blue;
+}
+
+
+
+
 footer {
   position: absolute;
   color: black;
