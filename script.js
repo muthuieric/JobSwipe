@@ -5,7 +5,7 @@ const appKey = '9900272350dcb254d0ee836780091275';
 const jobQueryInput = document.getElementById('jobQuery');
 const locationInput = document.getElementById('location');
 const searchBtn = document.getElementById('searchBtn');
-const cardContainer= document.getElementsByClassName("card-container");
+const cardContainer = document.querySelector('.card-container');
 
 searchBtn.addEventListener('click', () => {
   const jobQuery = jobQueryInput.value;
