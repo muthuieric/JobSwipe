@@ -97,7 +97,6 @@ background-color: aliceblue;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .card p:first-child {
   color: #00F;
@@ -108,20 +107,20 @@ background-color: aliceblue;
 .card p:nth-child(2){
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 
 }
 .card p:nth-child(3){
-  font-weight: 400;
-  line-height: 1.2rem;
-  margin-bottom: 10px;
-
-  }
-.card p:last-child{
   color: #00F;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 10px;
 
 }
+.card p:last-child{
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+}
+
 }

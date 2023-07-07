@@ -31,17 +31,18 @@ searchBtn.addEventListener('click', () => {
         jobCard.appendChild(jobTitle);
 
         const jobLocation = document.createElement('p');
-        jobLocation.textContent = job.location.area;
+        jobLocation.textContent = job.location.display_name;
         jobCard.appendChild(jobLocation);
+
+        const jobSalary = document.createElement('p');
+        jobSalary.textContent = `$${job.salary_min} per year`;
+        jobCard.appendChild(jobSalary);
 
         const jobDescription = document.createElement('p');
         jobDescription.textContent = job.description;
         jobCard.appendChild(jobDescription);
 
-        const jobSalary = document.createElement('p');
-        jobSalary.textContent = `Ksh ${job.salary_min}`;
-        jobCard.appendChild(jobSalary);
-
+      
         cardContainer.appendChild(jobCard);
       });
     })
@@ -49,3 +50,4 @@ searchBtn.addEventListener('click', () => {
       console.log('Error:', error);
     });
 });
+
