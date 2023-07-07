@@ -6,8 +6,6 @@
   }
   
   .container {
-  display: grid;
-  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -18,7 +16,6 @@
 
 .fSection{
   background-color: #0000ff;
-  padding-left: 20px;
   display: flex;
   flex-direction: column;
   text-align:justify;
@@ -29,6 +26,7 @@
 .fSection p{
   color: #FFF;
   line-height: 40px;
+  width: 90%;
   
 }
 .fSection p:first-child{
@@ -61,8 +59,8 @@
 #location {
   border: 1px solid #cccccc;
   padding: 0.5rem;
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 500px;
   border-radius: 10px;
   margin: 10px;
 }
@@ -99,7 +97,8 @@
 }
 
 .card {
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
@@ -168,7 +167,7 @@
 
 .form-control {
   max-width: 1000px;
-  width: 100%;
+  width: 90%;
   margin: 1rem auto; /* Set top and bottom margin to auto and left/right margin to 1rem */
   padding: 0.5rem;
   font-size: 1rem;
