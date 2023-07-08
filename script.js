@@ -18,6 +18,7 @@ searchBtn.addEventListener('click', () => {
   fetch(apiUrlWithParams)
     .then(response => response.json())
     .then(data => {
+ 
       // Clear previous results
       cardContainer.innerHTML = '';
 
@@ -45,9 +46,60 @@ searchBtn.addEventListener('click', () => {
       
         cardContainer.appendChild(jobCard);
       });
+
+       // Reset input fields
+       jobQueryInput.value = '';
+       locationInput.value = '';
     })
     .catch(error => {
       console.log('Error:', error);
     });
 });
 
+
+
+
+
+// const form = document.getElementById('form');
+
+//   form.addEventListener('submit', (e) => {
+//     e.preventDefault(); // Prevent form submission
+
+//     // Get form input values
+//     const name = form.elements.name.value;
+//     const email = form.elements.email.value;
+//     const phone = form.elements.phone.value;
+//     const message = form.elements.message.value;
+
+//     // Create an object to store the form data
+//     const formData = {
+//       name: name,
+//       email: email,
+//       phone: phone,
+//       message: message
+//     };
+
+
+//   });
+//     // You can now send the form data to your backend for further processing and storage
+//     // This could involve making an AJAX request to your server or using a form submission library
+
+//     // For example, you can use fetch API to send the data to a server endpoint
+//     fetch('/your-server-endpoint', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(formData)
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       // Handle the response from the server
+//       console.log(data);
+//       // Reset the form
+//       form.reset();
+//     })
+//     .catch(error => {
+//       console.log('Error:', error);
+//     });
+//   });
