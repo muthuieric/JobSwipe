@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiUrlWithParams = `${apiUrl}/jobs/us/search/1?app_id=${appId}&app_key=${appKey}&what=${jobQuery}&where=${location}`;
 
     // Fetch job search results
-    fetch(apiUrlWithParams)
+    fetch(apiUrlWithParams, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      }
+    })
       .then(response => response.json())
       .then(data => {
         // Clear previous results
