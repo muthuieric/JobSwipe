@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBtn = document.getElementById('searchBtn');
   const cardContainer = document.querySelector('.card-container');
 
+  // Event listener for the search button
   searchBtn.addEventListener('click', () => {
     const jobQuery = jobQueryInput.value;
     const location = locationInput.value;
 
-    // Construct API URL
+    // Construct API URL with parameters
     const apiUrlWithParams = `${apiUrl}/jobs/us/search/1?app_id=${appId}&app_key=${appKey}&what=${jobQuery}&where=${location}`;
 
     // Fetch job search results
@@ -61,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
+  // Event listener for the form submission
   const form = document.getElementById('form');
-
   form.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent form submission
 
@@ -79,11 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
       phone: phone,
       message: message
     };
+
     console.log(formData);
-    
+
     // Reset input fields
-  form.reset();
+    form.reset();
   });
-  
- 
 });
