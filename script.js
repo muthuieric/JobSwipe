@@ -1,105 +1,83 @@
-const apiUrl = 'https://api.adzuna.com/v1/api';
-const appId = '4baabc0a';
-const appKey = '9900272350dcb254d0ee836780091275';
+document.addEventListener('DOMContentLoaded', () => {
+  const apiUrl = 'https://api.adzuna.com/v1/api';
+  const appId = '4baabc0a';
+  const appKey = '9900272350dcb254d0ee836780091275';
 
-const jobQueryInput = document.getElementById('jobQuery');
-const locationInput = document.getElementById('location');
-const searchBtn = document.getElementById('searchBtn');
-const cardContainer = document.querySelector('.card-container');
+  const jobQueryInput = document.getElementById('jobQuery');
+  const locationInput = document.getElementById('location');
+  const searchBtn = document.getElementById('searchBtn');
+  const cardContainer = document.querySelector('.card-container');
 
-searchBtn.addEventListener('click', () => {
-  const jobQuery = jobQueryInput.value;
-  const location = locationInput.value;
+  searchBtn.addEventListener('click', () => {
+    const jobQuery = jobQueryInput.value;
+    const location = locationInput.value;
 
-  // Construct API URL
-  const apiUrlWithParams = `${apiUrl}/jobs/us/search/1?app_id=${appId}&app_key=${appKey}&what=${jobQuery}&where=${location}`;
+    // Construct API URL
+    const apiUrlWithParams = `${apiUrl}/jobs/us/search/1?app_id=${appId}&app_key=${appKey}&what=${jobQuery}&where=${location}`;
 
-  // Fetch job search results
-  fetch(apiUrlWithParams)
-    .then(response => response.json())
-    .then(data => {
- 
-      // Clear previous results
-      cardContainer.innerHTML = '';
+    // Fetch job search results
+    fetch(apiUrlWithParams)
+      .then(response => response.json())
+      .then(data => {
+        // Clear previous results
+        cardContainer.innerHTML = '';
 
-      // Display each job listing as a card
-      data.results.forEach(job => {
-        const jobCard = document.createElement('div');
-        jobCard.classList.add('card');
+        // Display each job listing as a card
+        data.results.forEach(job => {
+          const jobCard = document.createElement('div');
+          jobCard.classList.add('card');
 
-        const jobTitle = document.createElement('p');
-        jobTitle.textContent = job.title;
-        jobCard.appendChild(jobTitle);
+          const jobTitle = document.createElement('p');
+          jobTitle.textContent = job.title;
+          jobCard.appendChild(jobTitle);
 
-        const jobLocation = document.createElement('p');
-        jobLocation.textContent = job.location.display_name;
-        jobCard.appendChild(jobLocation);
+          const jobLocation = document.createElement('p');
+          jobLocation.textContent = job.location.display_name;
+          jobCard.appendChild(jobLocation);
 
-        const jobSalary = document.createElement('p');
-        jobSalary.textContent = `$${job.salary_min} per year`;
-        jobCard.appendChild(jobSalary);
+          const jobSalary = document.createElement('p');
+          jobSalary.textContent = `$${job.salary_min} per year`;
+          jobCard.appendChild(jobSalary);
 
-        const jobDescription = document.createElement('p');
-        jobDescription.textContent = job.description;
-        jobCard.appendChild(jobDescription);
+          const jobDescription = document.createElement('p');
+          jobDescription.textContent = job.description;
+          jobCard.appendChild(jobDescription);
 
-      
-        cardContainer.appendChild(jobCard);
+          cardContainer.appendChild(jobCard);
+        });
+
+        // Reset input fields
+        jobQueryInput.value = '';
+        locationInput.value = '';
+      })
+      .catch(error => {
+        console.log('Error:', error);
       });
+  });
 
-       // Reset input fields
-       jobQueryInput.value = '';
-       locationInput.value = '';
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent form submission
+
+    // Get form input values
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const phone = form.elements.phone.value;
+    const message = form.elements.message.value;
+
+    // Create an object to store the form data
+    const formData = {
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
+    };
+    console.log(formData);
+    
+    // Reset input fields
+  form.reset();
+  });
+  
+ 
 });
-
-
-
-
-
-// const form = document.getElementById('form');
-
-//   form.addEventListener('submit', (e) => {
-//     e.preventDefault(); // Prevent form submission
-
-//     // Get form input values
-//     const name = form.elements.name.value;
-//     const email = form.elements.email.value;
-//     const phone = form.elements.phone.value;
-//     const message = form.elements.message.value;
-
-//     // Create an object to store the form data
-//     const formData = {
-//       name: name,
-//       email: email,
-//       phone: phone,
-//       message: message
-//     };
-
-
-//   });
-//     // You can now send the form data to your backend for further processing and storage
-//     // This could involve making an AJAX request to your server or using a form submission library
-
-//     // For example, you can use fetch API to send the data to a server endpoint
-//     fetch('/your-server-endpoint', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(formData)
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//       // Handle the response from the server
-//       console.log(data);
-//       // Reset the form
-//       form.reset();
-//     })
-//     .catch(error => {
-//       console.log('Error:', error);
-//     });
-//   });
