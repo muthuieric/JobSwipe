@@ -16,18 +16,18 @@ The application utilizes the Adzuna API to fetch job listings based on user sear
 
 ## Features
 - Search for job listings based on job title and location.
-- Display job listings with relevant details like title, location, salary, and description/
+- Display job listings with relevant details like title, location, salary, and description
 - User-friendly interface with a responsive design
 - Contact form to get in touch with the JobSwipe team.
 
 
 ## Project Setup Instructions
-1. Clone the repository: git clone https://github.com/your-username/jobswipe.git
-2. Change to the project directory:cd jobswipe
-3. Install the project dependencies:npm install
+1. Clone the repository: `git clone git@github.com:muthuieric/JobSwipe.git`
+2. Change to the project directory:`cd jobswipe`
+3. Install the project dependencies:`npm install`
 4. Set up the API credentials:
    - Sign up for an account on the Adzuna developer portal.
-   - Obtain your appId and appKey.
+   - Obtain your `appId` and `appKey`.
 3. Open the index.html file in a web browser.
 
 ## API Integration
@@ -36,7 +36,7 @@ https://api.adzuna.com/v1/api/jobs/us/search/1?app_id={appId}&app_key={appKey}&w
 To use the app with the API, you will need to obtain an appId and appKey from Adzuna and replace them in the API endpoint URL.
 
 ## Live Site
-The live site for this project is hosted on GitHub Pages. You can access it by following this link: [JobSwipe Live Site](https://muthuieric.github.io/jobswipe)
+The live site for this project is hosted on GitHub Pages. You can access it by following this link: [JobSwipe Live Site](https://muthuieric.github.io/JobSwipe/)
 
 ## Technologies Used
 1. HTML
@@ -44,7 +44,7 @@ The live site for this project is hosted on GitHub Pages. You can access it by f
 3. JavaScript
 
 ## Author 
-Author: Eric Muthui. 
+Author: `Eric Muthui`. 
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
